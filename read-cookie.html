@@ -1,0 +1,11 @@
+<body>
+    <script>
+        (function () {
+            if (!window.parent) return;
+            var msg = /s=1/.test(document.cookie)
+                ? "3PC_SUPPORTED"
+                : "3PC_UNSUPPORTED";
+            window.parent.postMessage(msg, "*");
+        })();
+    </script>
+</body>
